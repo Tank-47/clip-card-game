@@ -318,7 +318,8 @@
             console.log("OK");
             $(".back").css({transform:"rotateY(-180deg)"});
         },3000);
-
+	
+	    reset();
         function reset(){
             for(var i = 1; i<9; i++){
             $('#a'+ i+'').removeAttr("onclick");
@@ -335,7 +336,7 @@
             }
         },3100);
 
-        reset();
+       
 
 	</script>
 </body>
