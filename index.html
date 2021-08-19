@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>flip card game</title>
     <link rel="stylesheet" type="text/css" href="flipCardGameStyle.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
 	<div class ="top">
@@ -311,6 +312,31 @@
         function win(){
             
         }
+
+        
+        setTimeout(function(){
+            console.log("OK");
+            $(".back").css({transform:"rotateY(-180deg)"});
+        },3000);
+
+        function reset(){
+            for(var i = 1; i<9; i++){
+            $('#a'+ i+'').removeAttr("onclick");
+            $('#b'+ i+'').removeAttr("onclick");
+            }
+        }
+
+        setTimeout(function(){  
+            for(var i = 1; i<9; i++){
+           // $('#a'+ i+'').attr("onclick",'flip("a'+ i+'", ""'+ x+'"")');
+           $('#a'+ i+'').attr("onclick",'flip("a'+ i+'",'+Number(i-1)+')');
+           $('#b'+ i+'').attr("onclick",'flip("b'+ i+'",'+Number(i-1)+')');
+            console.log(i-1);
+            }
+        },3100);
+
+        reset();
+
 	</script>
 </body>
 </html>
