@@ -57,7 +57,7 @@
   }
     .cardGame{
     margin: auto;
-    width: 30%;
+    width: 40%;
     height: 40%;
     display: flex;
     flex-direction: row;
@@ -77,7 +77,7 @@
 }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1000px) {
   body {
     background-color: lightblue;
   }
@@ -92,8 +92,40 @@
 }
        
     .card{
-   width: 50px;
+   width: 60px;
     height: 100px; 
+    position: relative;
+    perspective: 1500;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    perspective: 1500;
+    margin-left: 2%;   
+}
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+    
+    .top{
+   margin-top: 100px;
+}
+    
+    .cardGame{
+    margin-top:45%;
+    margin: auto;
+    width: 60%;
+    height: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+       
+    .card{
+   width: 50px;
+    height: 80px; 
     position: relative;
     perspective: 1500;
     transition: transform 1s ease-in-out;
